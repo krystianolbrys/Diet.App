@@ -4,4 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Diet.App.Api.Security\Diet.App.Api.Security.csproj" />
+  </ItemGroup>
+
 </Project>

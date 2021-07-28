@@ -1,3 +1,7 @@
+using Diet.App.Api.Security.Hash;
+using Diet.App.Api.Security.Hash.Architecture;
+using Diet.App.Api.Security.Services;
+using Diet.App.Api.Security.Services.Architecture;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,6 +27,8 @@ namespace Diet.App.Api.Service
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddTransient<ITokenService, TokenService>();
+            services.AddTransient<IHashProcessor>(provider => new HMACSHA256Hasher("240i8h5g9b32y80gb13"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

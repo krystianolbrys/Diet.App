@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:64347",
+      "applicationUrl": "http://localhost:59742",
       "sslPort": 0
     }
   },
@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Diet.App.Api": {
+    "Diet.App.Api.Service": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

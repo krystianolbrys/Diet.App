@@ -6,6 +6,7 @@ using System;
 
 namespace Diet.App.Api.Controllers
 {
+    [Produces("application/json")]
     public class HomeController : Controller
     {
         private readonly ITokenService _tokenService;
@@ -17,9 +18,13 @@ namespace Diet.App.Api.Controllers
 
         public IActionResult Index()
         {
-            var hahed = _tokenService.CreateToken(Guid.NewGuid().ToString());
+            var token = _tokenService.CreateToken("teścik");
 
-            return Ok(hahed);
+            var ddd = _tokenService.CheckToken("dGXFm2Npaw==.eRJBQRjxsKT+xnZfF3Q9UFTriX7towIkl5A6wCalzBk=");
+
+
+
+            return Ok(new { Token = token, Compred = ddd });
         }
     }
 }

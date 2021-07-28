@@ -5,5 +5,7 @@
         string CreateToken(string data);
 
         bool CheckToken(string token);
+
+        string GetDataFromValidToken(string token);
     }
 }
